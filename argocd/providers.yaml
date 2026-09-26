@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: crossplane-proxmox
+  name: crossplane-providers
   namespace: argocd
 spec:
   project: default
@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/e-a-s-t/crossplane.git
     targetRevision: main
-    path: providers/proxmox
+    path: providers
 
   destination:
     server: https://kubernetes.default.svc
@@ -19,6 +19,7 @@ spec:
     automated:
       prune: true
       selfHeal: true
+
     syncOptions:
       - CreateNamespace=true
       - SkipDryRunOnMissingResource=true

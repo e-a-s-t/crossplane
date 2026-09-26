@@ -1,0 +1,13 @@
+apiVersion: virtualenvironmentpool.proxmoxbpg.m.crossplane.io/v1alpha1
+kind: EnvironmentPool
+metadata:
+  name: crossplane-test
+  namespace: crossplane-system
+spec:
+  forProvider:
+    poolId: crossplane-test
+    comment: Crossplane connectivity test
+
+  providerConfigRef:
+    name: default
+    kind: ProviderConfig
