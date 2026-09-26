@@ -3,4 +3,4 @@ kind: Provider
 metadata:
   name: provider-proxmox-bpg
 spec:
-  package: xpkg.upbound.io/valkiriaaquaticamendi/provider-proxmox-bpg:v1.0.0
+  package: xpkg.upbound.io/valkiriaaquaticamendi/provider-proxmox-bpg:v1.18.0
